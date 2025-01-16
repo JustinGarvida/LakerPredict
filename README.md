@@ -13,7 +13,7 @@ BasketballPredict is an innovative online application designed for NBA enthusias
 ## Tech Stack
 ### Frontend
 - **React**: For crafting a responsive UI.
-- **D3.js**: For creating interactive data visualizations.
+- **Rechart.js**: For creating interactive data visualizations.
 
 ### Backend
 - **Node.js** & **Express**: For handling server-side logic and API requests.
