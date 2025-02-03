@@ -1,0 +1,22 @@
+from bs4 import BeautifulSoup
+import requests
+
+# URL to scrape
+url = "https://www.espn.com/nba/player/gamelog/_/id/1966/lebron-james"
+
+# Fetch the webpage content
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the HTML content
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Print the raw HTML content (optional - full HTML)
+    print(soup.prettify())
+    
+    # Example: Extract and print the title of the page
+    page_title = soup.title.string
+    print("\nPage Title:", page_title)
+else:
+    print(f"Failed to retrieve the page. Status code: {response.status_code}")
